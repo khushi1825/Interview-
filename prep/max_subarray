@@ -15,7 +15,7 @@ class Solution {
 }
 
 why not maxsum=0
-suppose [-5 , -2 ,-8]
+suppose [-5 , -2 ,-8] all negative numbers
 maxsum=-2 but it will return 0 if we intialise with 0 
 
 If you reset sum before updating maxsum, you'd lose the correct answer .
