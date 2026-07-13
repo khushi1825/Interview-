@@ -1,0 +1,21 @@
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int n=nums.length;
+        int maxsum=Integer.MIN_VALUE;
+        int sum=0;
+        for(int i=0;i<n;i++){
+            sum+=nums[i];
+            maxsum=Math.max(maxsum,sum);  
+            if(sum<0){
+                sum=0;
+            }
+        }
+        return maxsum;
+    }
+}
+
+why not maxsum=0
+suppose [-5 , -2 ,-8]
+maxsum=-2 but it will return 0 if we intialise with 0 
+
+If you reset sum before updating maxsum, you'd lose the correct answer .
